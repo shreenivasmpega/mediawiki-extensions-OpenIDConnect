@@ -375,7 +375,7 @@ class OpenIDConnect extends PluggableAuth implements BackchannelLogoutAwarePlugi
 				);
 				$this->setSessionSecret( 
 					self::OIDC_ACCESSTOKENFULL_SESSION_KEY, 
-					$oidc->getAccessToken() 
+					$this->openIDConnectClient->getAccessToken() 
 				);
 				$this->setSessionSecret(
 					self::OIDC_REFRESHTOKEN_SESSION_KEY,
